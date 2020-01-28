@@ -1,0 +1,112 @@
+https://reactjs.org/docs/hello-world.html
+https://www.w3schools.com/REACT/default.asp
+https://reactjs.org/tutorial/tutorial.html
+
+
+What is React?
+React is a JavaScript library created by Facebook for building user interfaces.
+React is used to build Single Page Applications(SPA) as well as to create reusable UI components.
+It’s a component-based JavaScript library that renders smartly and can seriously simplify your work.
+
+How does React work?
+React creates a VIRTUAL DOM in memory.
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, 
+where it does all the necessary manipulating, before making the changes in the browser DOM.
+React only changes what needs to be changed!
+
+React Getting Started
+To use React in Production, you need NPM and NodeJS
+
+Setting up a React Environment
+PreRequisites: NPM and NodeJS
+Basic knowledge of HTML, CSS and JavaScript
+
+React uses ES6 and JSX
+ES6 stands for ECMAScript 6.
+ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript.
+
+JSX stands for JavaScript XML.
+JSX produces React "elements". (Rendering elements to the DOM)
+JSX allows us to write HTML in React and it makes easier to add HTML elements in React.
+JSX converts HTML tags into React elements.
+It is not mendatory to use JSX but it makes easier to write React applications.
+JSX follows XML rules, and therefore it will throw an error if the HTML is not correct, 
+or if the HTML misses a parent element.
+JSX is an extension of the JavaScript language based on ES6, and 
+is translated into regular JavaScript at runtime.
+
+With JSX,
+const myelement = <h1>I Love JSX!</h1>;
+
+ReactDOM.render(myelement, document.getElementById('root'));
+
+Without JSX,
+const myelement = React.createElement('h1', {}, 'I do not use JSX!');
+
+ReactDOM.render(myelement, document.getElementById('root'));
+
+If you have NPM and Node.js installed, you can create a React application by 
+first installing the create-react-app.
+Install create-react-app by running this command in your terminal:
+C:\Users\Your Name>npm install -g create-react-app
+
+You are now ready to create your first React application!
+Run this command to create a React application named myfirstreact:
+C:\Users\Your Name>npx create-react-app myfirstreact
+
+The create-react-app will set up ev
+erything you need to run a React application.
+It will Install everything - react, react-dom and react-scripts with cra-templates.
+
+
+Run the React Application
+Basic commands:
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+
+Run this command to move to the myfirstreact directory:
+C:\Users\Your Name>cd myfirstreact
+Run this command to execute the React application myfirstreact:
+C:\Users\Your Name\myfirstreact>npm start
+A new browser window will pop up with your newly created React App! 
+If not, open your browser and type localhost:3000 in the address bar.
+
+=============================================================================
+Rendering Elements:
+Elements are the smallest building blocks of React apps.
+An element describes what you want to see on the screen.
+"Elements" are what "components" are “made of”.
+
+<div id="root"></div>
+We call this a “root” DOM node because everything inside it will be managed by React DOM.
+
+Applications built with just React usually have a single root DOM node. 
+If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.
+To render a React element into a root DOM node, pass both to ReactDOM.render():
+
+const element = <h1>Hello, world</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+
+Updating the Rendered Element
+React elements are immutable. Once you create an element, you can’t change its children or attributes. 
+An element is like a single frame in a movie: it represents the UI at a certain point in time.
+
+The only way to update the UI is to create a new element, and pass it to ReactDOM.render().
+======================================================================================
+ES6
+1. We define variables with let and const statements. For the purposes of the React documentation, you can consider them equivalent to var.
+2. We use the class keyword to define JavaScript classes. There are two things worth remembering about them. Firstly, unlike with objects, you don't need to put commas between class method definitions. Secondly, unlike many other languages with classes, in JavaScript the value of this in a method depends on how it is called.
+3. We sometimes use => to define "arrow functions". They're like regular functions, but shorter. For example, x => x * 2 is roughly equivalent to function(x) { return x * 2; }. Importantly, arrow functions don't have their own this value so they're handy when you want to preserve the this value from an outer method definition.
+=========================================================================================
+React components
