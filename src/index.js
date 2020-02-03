@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import logo from "./logo.svg";
+import Piano from "./customcomponent.js"; // use custom component from other file
+
 // import App from "./App";
 // import * as serviceWorker from "./serviceWorker";
 
@@ -145,3 +147,20 @@ class Cycle extends React.Component {
 }
 
 ReactDOM.render(<Cycle color="black" />, document.getElementById("root"));
+
+// Components in component
+class Parking extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Which vehicles are parked in this area?</h1>
+        <Cycle />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Parking />, document.getElementById("root"));
+
+// Components in Files
+ReactDOM.render(<Piano />, document.getElementById("root"));
