@@ -164,3 +164,55 @@ ReactDOM.render(<Parking />, document.getElementById("root"));
 
 // Components in Files
 ReactDOM.render(<Piano />, document.getElementById("root"));
+
+// React Props
+ReactDOM.render(<Piano color="Silver" />, document.getElementById("root"));
+
+// Calling custom components by variable instead of by string as attribute: color={colorname} instead color="White"
+class Kittyhouse extends React.Component {
+  render() {
+    const colorname = "Black"; // variable colorname
+    return (
+      <div>
+        <h1>Who lives in my Kitty house?</h1>
+        <Piano color={colorname} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Kittyhouse />, document.getElementById("root"));
+
+// Calling custom component by calling an object
+class Audicar extends React.Component {
+  render() {
+    return <h1>Hi, I am {this.props.brand.model} car!</h1>;
+  }
+}
+
+class Garage extends React.Component {
+  render() {
+    const carinfo = { name: "Audi", model: "Audi A6 allroad quattro" }; // object carinfo
+    return (
+      <div>
+        <h1>Whol lives in this Garage?</h1>
+        <Audicar brand={carinfo} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Garage />, document.getElementById("root"));
+
+// Passing props to the constructor via super() method
+// class Fordcar extends React.Component {
+//   constructor(props) {
+//     super();
+//   }
+
+//   render() {
+//     return <h2>I am {this.props.model} Car!</h2>;
+//   }
+// }
+
+// ReactDOM.render(<Fordcar model="Mustang" />, document.getElementById("root"));

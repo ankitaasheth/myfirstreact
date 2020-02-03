@@ -146,4 +146,17 @@ To be able to use the Car component, you have to import the file in your applica
 import Car from './App.js'; (or any filename where you have created Car component)
 
 ReactDOM.render(<Car />, document.getElementById('root'));
+==========================================================================================
 
+React Props
+React Props are like function arguments in JavaScript and attributes in HTML.
+
+To send props into a component, use the same syntax as HTML attributes:
+eg. Add a "brand" attribute to the Car element:
+
+const myelement = <Car brand="Ford" />;
+
+The component receives the argument as a props object:
+return <h2>I am a {this.props.brand}!</h1>;
+
+You can call class component by attribute, by variable or by calling an object as well.
