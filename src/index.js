@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import logo from "./logo.svg";
 import Piano from "./customcomponent.js"; // use custom component from other file
+import Printer from "./reactstate.js";
 
 // import App from "./App";
 // import * as serviceWorker from "./serviceWorker";
@@ -15,9 +16,17 @@ function formatName(user) {
 
 function getGreeting(username) {
   if (username) {
-    return <h1>Hello, {username}!</h1>;
+    return (
+      <div>
+        <h1>Hello, {username}!</h1>
+      </div>
+    );
   }
-  return <h1>Hello, Stranger!</h1>;
+  return (
+    <div>
+      <h1>Hello, Stranger!</h1>
+    </div>
+  );
 }
 
 /*function tick() {
@@ -43,10 +52,18 @@ function randomVal() {
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 // if you want to load index.html content
-const myfirstelement = <h1>Hello React!</h1>;
+const myfirstelement = (
+  <div>
+    <h1>Hello React!</h1>
+  </div>
+);
 
 const name = "Ankita Sheth";
-const mysecondelement = <h2>Hello, {name}!</h2>;
+const mysecondelement = (
+  <div>
+    <h2>Hello, {name}!</h2>
+  </div>
+);
 
 const user = {
   firstname: "Ankita",
@@ -54,14 +71,16 @@ const user = {
 };
 
 const mythirdelement = (
-  <h1>
-    Hello,
-    {formatName(user)}!
-  </h1>
+  <div>
+    <h3>
+      Hello,
+      {formatName(user)}!
+    </h3>
+  </div>
 );
 
 const username = ""; // "Ankita Sheth"
-const myfourthelement = <h1>{getGreeting(username)}</h1>;
+const myfourthelement = <div>{getGreeting(username)}</div>;
 
 const myfifthelement = (
   <div className="App">
@@ -85,21 +104,25 @@ ReactDOM.render(myfifthelement, document.getElementById("root"));
 ReactDOM.render(mysixthelement, document.getElementById("root"));
 
 const myelement = (
-  <table>
-    <tr>
-      <th>Name</th>
-    </tr>
-    <tr>
-      <td>Ankita</td>
-    </tr>
-    <tr>
-      <td>John</td>
-    </tr>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th>Name</th>
+        </tr>
+        <tr>
+          <td>Ankita</td>
+        </tr>
+        <tr>
+          <td>John</td>
+        </tr>
+      </tbody>
+    </table>
     <ul>
       <li>Apples</li>
       <li>Bananas</li>
     </ul>
-  </table>
+  </div>
 );
 ReactDOM.render(myelement, document.getElementById("root"));
 
@@ -216,3 +239,7 @@ ReactDOM.render(<Garage />, document.getElementById("root"));
 // }
 
 // ReactDOM.render(<Fordcar model="Mustang" />, document.getElementById("root"));
+
+// React state
+
+ReactDOM.render(<Printer />, document.getElementById("root"));
