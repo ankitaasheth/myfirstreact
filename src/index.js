@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import logo from "./logo.svg";
-import Piano from "./customcomponent.js"; // use custom component from other file
-import Printer from "./reactstate.js";
+import Piano from "./components/customcomponent.js"; // use custom component from other file
+import Printer from "./components/reactstate.js"; // component contains eg of React State
 
 // import App from "./App";
 // import * as serviceWorker from "./serviceWorker";
