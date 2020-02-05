@@ -241,5 +241,7 @@ ReactDOM.render(<Garage />, document.getElementById("root"));
 // ReactDOM.render(<Fordcar model="Mustang" />, document.getElementById("root"));
 
 // React state
-
 ReactDOM.render(<Printer />, document.getElementById("root"));
+
+// Updating react state via getDerivedStateFromProps
+// ReactDOM.render(<Printer favcol="yellow" />, document.getElementById("root"));
