@@ -4,6 +4,8 @@ import "./index.css";
 import logo from "./logo.svg";
 import Movie from "./components/customcomponent.js"; // use custom component from other file
 import Printer from "./components/reactstate.js"; // component contains eg of React State
+import Notes from "./components/reactevents.js"; // component explaining react event handling
+import Toggle from "./components/toggle.js"; // component for react state
 
 // import App from "./App";
 // import * as serviceWorker from "./serviceWorker";
@@ -256,6 +258,10 @@ ReactDOM.render(
     <Movie title="Avatar" desc="action" />
     <Movie title="Badla" desc="bollywood" />
     <Printer />
+    <Notes>Ankita</Notes>
+    <Notes>Anas</Notes>
+    <Notes>Marcus</Notes>
+    <Toggle />
   </div>,
   document.getElementById("root")
 );
