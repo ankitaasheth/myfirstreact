@@ -1,11 +1,16 @@
 import React from "react";
 // import ReactDOM from "react-dom";
 
-class Piano extends React.Component {
+class Movie extends React.Component {
   render() {
     // return <h1>Hi, I am a Piano!</h1>;
-    return <h1>Hi, I am a {this.props.color} Piano!</h1>;
+    return (
+      <div>
+        <h1>{this.props.title}</h1>
+        <h2>{this.props.desc}</h2>
+      </div>
+    );
   }
 }
 
-export default Piano;
+export default Movie;

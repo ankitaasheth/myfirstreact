@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import logo from "./logo.svg";
-import Piano from "./components/customcomponent.js"; // use custom component from other file
+import Movie from "./components/customcomponent.js"; // use custom component from other file
 import Printer from "./components/reactstate.js"; // component contains eg of React State
 
 // import App from "./App";
@@ -186,19 +186,22 @@ class Parking extends React.Component {
 ReactDOM.render(<Parking />, document.getElementById("root"));
 
 // Components in Files
-ReactDOM.render(<Piano />, document.getElementById("root"));
+ReactDOM.render(<Movie />, document.getElementById("root"));
 
 // React Props
-ReactDOM.render(<Piano color="Silver" />, document.getElementById("root"));
+ReactDOM.render(
+  <Movie title="Rang de Basanti" />,
+  document.getElementById("root")
+);
 
 // Calling custom components by variable instead of by string as attribute: color={colorname} instead color="White"
 class Kittyhouse extends React.Component {
   render() {
-    const colorname = "Black"; // variable colorname
+    const moviename = "Black"; // variable moviename
     return (
       <div>
         <h1>Who lives in my Kitty house?</h1>
-        <Piano color={colorname} />
+        <Movie title={moviename} />
       </div>
     );
   }
@@ -241,7 +244,18 @@ ReactDOM.render(<Garage />, document.getElementById("root"));
 // ReactDOM.render(<Fordcar model="Mustang" />, document.getElementById("root"));
 
 // React state
-ReactDOM.render(<Printer />, document.getElementById("root"));
+// ReactDOM.render(<Printer />, document.getElementById("root"));
 
 // Updating react state via getDerivedStateFromProps
 // ReactDOM.render(<Printer favcol="yellow" />, document.getElementById("root"));
+
+// To render multiple components in one, need to add one parent element div as below
+ReactDOM.render(
+  <div>
+    <Movie title="Half Girlfriend" desc="romantic" />
+    <Movie title="Avatar" desc="action" />
+    <Movie title="Badla" desc="bollywood" />
+    <Printer />
+  </div>,
+  document.getElementById("root")
+);
