@@ -54,8 +54,7 @@ You are now ready to create your first React application!
 Run this command to create a React application named myfirstreact:
 C:\Users\Your Name>npx create-react-app myfirstreact
 
-The create-react-app will set up ev
-erything you need to run a React application.
+The create-react-app will set up everything you need to run a React application.
 It will Install everything - react, react-dom and react-scripts with cra-templates.
 
 
