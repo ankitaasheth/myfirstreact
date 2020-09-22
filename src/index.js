@@ -6,6 +6,9 @@ import Movie from "./components/customcomponent.js"; // use custom component fro
 import Printer from "./components/reactstate.js"; // component contains eg of React State
 import Notes from "./components/reactevents.js"; // component explaining react event handling
 import Toggle from "./components/toggle.js"; // component for react state
+import TestComponent from "./components/testcomponent.js";
+// import Bostad from "./components/bostad.js";
+// import Summary from "./components/bostadsummary.js";
 
 // import App from "./App";
 // import * as serviceWorker from "./serviceWorker";
@@ -69,7 +72,7 @@ const mysecondelement = (
 
 const user = {
   firstname: "Ankita",
-  lastname: "Sheth"
+  lastname: "Sheth",
 };
 
 const mythirdelement = (
@@ -254,14 +257,33 @@ ReactDOM.render(<Garage />, document.getElementById("root"));
 // To render multiple components in one, need to add one parent element div as below
 ReactDOM.render(
   <div>
-    <Movie title="Half Girlfriend" desc="romantic" />
-    <Movie title="Avatar" desc="action" />
-    <Movie title="Badla" desc="bollywood" />
+    <h1>Movie List</h1>
+    <Movie title="Half Girlfriend" desc="romantic movie" />
+    <Movie title="Avatar" desc="action movie" />
+    <Movie title="Badla" desc="bollywood movie" />
     <Printer />
     <Notes>Ankita</Notes>
     <Notes>Anas</Notes>
     <Notes>Marcus</Notes>
     <Toggle />
+    <TestComponent />
   </div>,
   document.getElementById("root")
 );
+
+// ReactDOM.render(
+//   <div>
+//     <Bostad
+//       title="Villa Simeana"
+//       desc="Beautifully renovated 19th-century house in Croatia's Tuscany"
+//       detail="Villa Simeana is a nice renovated villa, originally from 1805, with beautiful stone architecture that fits perfectly into the surrounding Istrian countryside. Its modern style and recycled stonework and oak beams used give it a very special atmosphere, a mixture of tradition, comfort and luxury. Villa Simeana is located in Kringa, just 20 km from the resort of Poreč and can accommodate up to 20 people, making it ideal for a large group of friends or family. There is a pool, summer kitchen with barbecue and seating for nice meals together. The nearest resort Poreč is a lovely coastal town with a wide range of shops, restaurants, etc. The UNESCO-protected Poreč Basilica is well worth a visit. From Poreč you can make a day trip by catamaran to Venice.
+//       The nearest shop is 200 m from the villa.
+
+// The nearest restaurant is 800 m from the villa. There are several nice fish restaurants on the Limfjord 10 km away.
+
+// Istralandia Aquapark is located about 35 km from the villa."
+//     />
+//     <Summary from="Kr 35,000" type="villa" />
+//   </div>,
+//   document.getElementById("root")
+// );
